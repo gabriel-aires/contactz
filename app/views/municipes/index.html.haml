@@ -1,0 +1,35 @@
+%h1 Listing municipes
+
+%table
+  %thead
+    %tr
+      %th Nome completo
+      %th Cpf
+      %th Cns
+      %th Email
+      %th Data nascimento
+      %th Telefone
+      %th Foto
+      %th Status
+      %th
+      %th
+      %th
+
+  %tbody
+    - @municipes.each do |municipe|
+      %tr
+        %td= municipe.nome_completo
+        %td= municipe.cpf
+        %td= municipe.cns
+        %td= municipe.email
+        %td= municipe.data_nascimento
+        %td= municipe.telefone
+        %td= municipe.foto
+        %td= municipe.status
+        %td= link_to 'Show', municipe
+        %td= link_to 'Edit', edit_municipe_path(municipe)
+        %td= link_to 'Destroy', municipe, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Municipe', new_municipe_path

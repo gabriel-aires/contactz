@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Nome completo:
+  = @municipe.nome_completo
+%p
+  %b Cpf:
+  = @municipe.cpf
+%p
+  %b Cns:
+  = @municipe.cns
+%p
+  %b Email:
+  = @municipe.email
+%p
+  %b Data nascimento:
+  = @municipe.data_nascimento
+%p
+  %b Telefone:
+  = @municipe.telefone
+%p
+  %b Foto:
+  = @municipe.foto
+%p
+  %b Status:
+  = @municipe.status
+
+= link_to 'Edit', edit_municipe_path(@municipe)
+\|
+= link_to 'Back', municipes_path

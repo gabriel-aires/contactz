@@ -1,0 +1,34 @@
+= form_for @municipe do |f|
+  - if @municipe.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@municipe.errors.count, "error")} prohibited this municipe from being saved:"
+      %ul
+        - @municipe.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nome_completo
+    = f.text_field :nome_completo
+  .field
+    = f.label :cpf
+    = f.text_field :cpf
+  .field
+    = f.label :cns
+    = f.text_field :cns
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :data_nascimento
+    = f.date_field :data_nascimento
+  .field
+    = f.label :telefone
+    = f.text_field :telefone
+  .field
+    = f.label :foto
+    = f.file_field :foto
+  .field
+    = f.label :status
+    = f.check_box :status
+  .actions
+    = f.submit 'Save'
