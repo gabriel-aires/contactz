@@ -74,3 +74,5 @@ group :test do
 end
 
 gem "hamlit-rails", "~> 0.2.3"
+
+gem "bulma-rails", "~> 0.9.3"
